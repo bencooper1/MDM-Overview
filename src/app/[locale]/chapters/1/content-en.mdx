@@ -1,0 +1,59 @@
+# Chapter 1: Introduction to Plasmonics & MDM Structures
+
+## 1.1 What is Plasmonics?
+
+**Plasmonics** is a branch of nanophotonics that studies the interaction between electromagnetic fields and free electrons in a metal. This interaction can lead to the formation of surface waves known as **Surface Plasmon Polaritons (SPPs)**.
+
+SPPs are electromagnetic excitations propagating at the interface between a dielectric and a conductor, evanescing in both media. The unique property of SPPs is their ability to confine light to subwavelength dimensions, overcoming the classical diffraction limit of light.
+
+## 1.2 The Drude Model of Metals
+
+To understand plasmonics, we must first understand the optical properties of metals. The most common model used to describe the dielectric function of a metal is the **Drude model**.
+
+In the Drude model, the free electrons in the metal are treated as an electron gas moving against a background of heavy, immobile positive ion cores. The complex dielectric function $\varepsilon_m(\omega)$ of the metal is given by:
+
+$$ \varepsilon_m(\omega) = 1 - \frac{\omega_p^2}{\omega^2 + i\gamma\omega} $$
+
+Where:
+- $\omega$ is the angular frequency of the incident light.
+- $\omega_p$ is the plasma frequency of the metal.
+- $\gamma$ is the damping constant (collision frequency).
+
+For optical and near-infrared frequencies, if $\omega^2 \gg \gamma^2$, the dielectric function is predominantly real and negative ($\varepsilon_m' < 0$), which is a fundamental requirement for the existence of SPPs.
+
+## 1.3 Overview of MDM Structures
+
+A **Metal-Dielectric-Metal (MDM)** structure, also known as an MIM (Metal-Insulator-Metal) waveguide, is a fundamental plasmonic configuration consisting of a thin dielectric layer sandwiched between two semi-infinite metal layers.
+
+Unlike a single interface, the MDM structure supports coupled SPP modes. Due to the interaction between the SPPs on the two metal-dielectric interfaces, the mode can be split into two fundamental modes:
+1. **Even mode** (symmetric magnetic field)
+2. **Odd mode** (antisymmetric magnetic field)
+
+### Advantages of MDM over IMI
+MDM structures provide stronger subwavelength field confinement compared to Insulator-Metal-Insulator (IMI) structures, making them highly suitable for highly integrated nanoscale photonic circuits, despite having higher propagation losses.
+
+---
+
+### Exercise 1.1
+Given the Drude model parameters for Silver (Ag) at a specific frequency $\omega$: $\omega_p = 1.38 \times 10^{16}$ rad/s and $\gamma = 3.22 \times 10^{13}$ rad/s. Calculate the dielectric constant of Ag at a wavelength of $\lambda = 1550$ nm (telecom wavelength). Note: $c = 3 \times 10^8$ m/s.
+
+<Solution>
+First, calculate the angular frequency $\omega$ for $\lambda = 1550$ nm:
+$$ \omega = \frac{2\pi c}{\lambda} = \frac{2\pi \times 3 \times 10^8}{1550 \times 10^{-9}} \approx 1.216 \times 10^{15} \text{ rad/s} $$
+
+Now, plug the values into the Drude model formula:
+$$ \varepsilon_m(\omega) = 1 - \frac{(1.38 \times 10^{16})^2}{(1.216 \times 10^{15})^2 + i(3.22 \times 10^{13})(1.216 \times 10^{15})} $$
+
+Let's calculate the terms:
+- $\omega_p^2 = 1.9044 \times 10^{32}$
+- $\omega^2 = 1.478 \times 10^{30}$
+- $\gamma\omega = 3.915 \times 10^{28}$
+
+Since $\omega^2 \gg \gamma\omega$, we can approximate the real part:
+$$ \text{Re}(\varepsilon_m) \approx 1 - \frac{\omega_p^2}{\omega^2} = 1 - \frac{1.9044 \times 10^{32}}{1.478 \times 10^{30}} \approx 1 - 128.8 = -127.8 $$
+
+For the imaginary part:
+$$ \text{Im}(\varepsilon_m) \approx \frac{\omega_p^2 \gamma}{\omega^3} \approx 3.3 $$
+
+So, $\varepsilon_{Ag} \approx -127.8 + 3.3i$ at 1550 nm. (Note: These values are approximate, empirical data may vary slightly).
+</Solution>

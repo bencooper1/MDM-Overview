@@ -1,0 +1,55 @@
+# Chương 2: Cơ sở lý thuyết của SPPs trong MDM
+
+## 2.1 Phương trình Maxwell & Điều kiện biên
+
+Để xây dựng các đặc tính của Phân cực tử plasmon bề mặt (SPPs) trong ống dẫn sóng Metal-Dielectric-Metal (MDM), chúng ta bắt đầu với **các phương trình Maxwell**. Giả sử môi trường phi từ tính ($\mu = 1$) và không có điện tích hoặc dòng điện tự do, phương trình sóng cho điện trường $\mathbf{E}$ là:
+
+$$ \nabla^2 \mathbf{E} - \frac{\varepsilon}{c^2} \frac{\partial^2 \mathbf{E}}{\partial t^2} = 0 $$
+
+Đối với ống dẫn sóng MDM trải dài theo hướng $y$ và $z$, với hướng lan truyền dọc theo trục $x$, chúng ta chỉ xét các mode Từ ngang (Transverse Magnetic - TM) (hay còn gọi là sóng phân cực p). SPPs chỉ tồn tại đối với phân cực TM bởi vì mật độ điện tích bề mặt đòi hỏi phải có thành phần điện trường vuông góc với mặt phân cách để bị kích thích.
+
+Các thành phần trường khác không là $E_x, E_z$, và $H_y$. Bằng cách áp dụng các điều kiện biên—sự liên tục của điện trường tiếp tuyến ($E_x$) và từ trường tiếp tuyến ($H_y$) qua các mặt phân cách—chúng ta có thể dẫn xuất ra các hệ thức tán sắc.
+
+## 2.2 Hệ thức tán sắc cho cấu trúc MDM
+
+Xét một ống dẫn sóng MDM có lõi điện môi độ rộng $w$ và hằng số điện môi $\varepsilon_d$, được kẹp giữa hai lớp bọc kim loại bán vô hạn có hằng số điện môi $\varepsilon_m$. Lõi trải dài từ $z = -w/2$ đến $z = w/2$.
+
+Sự tương tác giữa hai mode SPP tại hai mặt phân cách kim loại - điện môi dẫn đến sự phân tách mode. Hệ thức tán sắc cho các mode ghép cặp là các phương trình ẩn:
+
+**Đối với Mode chẵn (từ trường $H_y$ đối xứng):**
+$$ \tanh\left(\frac{k_d w}{2}\right) = -\frac{k_m \varepsilon_d}{k_d \varepsilon_m} $$
+
+**Đối với Mode lẻ (từ trường $H_y$ phản đối xứng):**
+$$ \coth\left(\frac{k_d w}{2}\right) = -\frac{k_m \varepsilon_d}{k_d \varepsilon_m} $$
+
+Ở đây, $k_d$ và $k_m$ là các hằng số suy giảm ngang trong điện môi và kim loại, được định nghĩa là:
+$$ k_d = \sqrt{\beta^2 - k_0^2 \varepsilon_d} $$
+$$ k_m = \sqrt{\beta^2 - k_0^2 \varepsilon_m} $$
+Trong đó $\beta$ là hằng số truyền (propagation constant) của mode SPP, và $k_0 = \omega / c$ là vector sóng trong chân không.
+
+## 2.3 Phân bố trường điện từ
+
+Phân bố trường $H_y(z)$ qua mặt cắt ngang của ống dẫn sóng MDM phụ thuộc vào mode:
+
+Đối với **Mode chẵn**, $H_y(z)$ có dạng giống hàm cosin bên trong lõi điện môi và suy giảm theo hàm mũ khi đi vào kim loại. Nó không cắt điểm 0 bên trong lõi.
+
+Đối với **Mode lẻ**, $H_y(z)$ có dạng giống hàm sin bên trong lõi điện môi, nghĩa là nó cắt ngang qua giá trị 0 tại tâm của ống dẫn sóng ($z = 0$). Do trường bằng không tại điểm này, mode lẻ thường có mức độ giam giữ năng lượng bên trong điện môi thấp hơn so với mode chẵn nhưng có thể có quãng đường truyền dài hơn.
+
+---
+
+### Bài tập 2.1
+Xét một ống dẫn sóng MDM rất rộng, trong đó chiều rộng điện môi $w \to \infty$. Điều gì xảy ra với các phương trình tán sắc cho cả mode chẵn và mode lẻ?
+
+<Solution>
+Khi chiều rộng $w$ tiến tới vô cùng ($w \to \infty$), số hạng $\frac{k_d w}{2}$ cũng tiến tới vô cùng.
+
+Chúng ta biết rằng đối với đối số lớn:
+$$ \lim_{x \to \infty} \tanh(x) = 1 $$
+$$ \lim_{x \to \infty} \coth(x) = 1 $$
+
+Thay thế chúng vào cả phương trình tán sắc của mode chẵn và lẻ, cả hai đều rút gọn thành một phương trình duy nhất:
+$$ 1 = -\frac{k_m \varepsilon_d}{k_d \varepsilon_m} $$
+$$ \frac{k_d}{\varepsilon_d} + \frac{k_m}{\varepsilon_m} = 0 $$
+
+Đây chính xác là hệ thức tán sắc cho một mặt phân cách đơn lẻ, không bị ghép cặp giữa một kim loại bán vô hạn và một điện môi bán vô hạn. Điều này hoàn toàn có ý nghĩa vật lý: nếu điện môi rộng vô hạn, các SPP trên mặt phân cách trên và mặt phân cách dưới ở quá xa nhau để có thể tương tác hoặc ghép cặp với nhau. Chúng hoạt động như hai SPP mặt phân cách đơn lẻ độc lập.
+</Solution>

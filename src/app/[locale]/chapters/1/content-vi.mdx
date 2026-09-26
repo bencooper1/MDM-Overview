@@ -1,0 +1,59 @@
+# Chương 1: Mở đầu về Plasmonics và Cấu trúc MDM
+
+## 1.1 Plasmonics là gì?
+
+**Plasmonics** (hay Plasmon học) là một nhánh của quang học nano (nanophotonics) nghiên cứu sự tương tác giữa trường điện từ và các electron tự do trong kim loại. Sự tương tác này có thể dẫn đến sự hình thành các sóng bề mặt được gọi là **Surface Plasmon Polaritons (SPPs) - Phân cực tử plasmon bề mặt**.
+
+SPPs là các kích thích điện từ truyền trên bề mặt phân cách giữa một môi trường điện môi và một vật dẫn (kim loại), và suy giảm theo hàm mũ khi đi vào cả hai môi trường. Tính chất độc đáo của SPPs là khả năng giam giữ ánh sáng ở kích thước nhỏ hơn bước sóng (subwavelength confinement), vượt qua giới hạn nhiễu xạ cổ điển của ánh sáng.
+
+## 1.2 Mô hình Drude của kim loại
+
+Để hiểu về plasmonics, trước tiên chúng ta phải hiểu tính chất quang học của kim loại. Mô hình phổ biến nhất được sử dụng để mô tả hàm điện môi của kim loại là **mô hình Drude**.
+
+Trong mô hình Drude, các electron tự do trong kim loại được coi như một khí electron chuyển động trên nền của các lõi ion dương nặng, bất động. Hàm điện môi phức $\varepsilon_m(\omega)$ của kim loại được cho bởi công thức:
+
+$$ \varepsilon_m(\omega) = 1 - \frac{\omega_p^2}{\omega^2 + i\gamma\omega} $$
+
+Trong đó:
+- $\omega$ là tần số góc của ánh sáng tới.
+- $\omega_p$ là tần số plasma của kim loại.
+- $\gamma$ là hằng số suy giảm (tần số va chạm).
+
+Đối với các dải tần số quang học và hồng ngoại gần, nếu $\omega^2 \gg \gamma^2$, hàm điện môi phần lớn là số thực và có giá trị âm ($\varepsilon_m' < 0$), đây là điều kiện cơ bản bắt buộc để tồn tại SPPs.
+
+## 1.3 Tổng quan về cấu trúc MDM
+
+Cấu trúc **Metal-Dielectric-Metal (MDM)**, hay còn gọi là ống dẫn sóng MIM (Metal-Insulator-Metal), là một cấu hình plasmonic cơ bản bao gồm một lớp điện môi mỏng kẹp giữa hai lớp kim loại bán vô hạn.
+
+Khác với một mặt phân cách đơn lẻ, cấu trúc MDM hỗ trợ các mode SPP ghép cặp (coupled SPP modes). Do sự tương tác giữa các SPPs trên hai mặt phân cách kim loại - điện môi, mode lan truyền có thể tách thành hai mode cơ bản:
+1. **Mode chẵn (Even mode)** (từ trường đối xứng)
+2. **Mode lẻ (Odd mode)** (từ trường phản đối xứng)
+
+### Ưu điểm của MDM so với IMI
+Cấu trúc MDM cung cấp khả năng giam giữ trường dưới bước sóng mạnh hơn nhiều so với cấu trúc Insulator-Metal-Insulator (IMI). Điều này làm cho chúng rất phù hợp cho các mạch quang tử mức độ tích hợp cao ở quy mô nano, mặc dù chúng có tổn hao lan truyền (propagation loss) lớn hơn.
+
+---
+
+### Bài tập 1.1
+Cho các thông số mô hình Drude của Bạc (Ag): $\omega_p = 1.38 \times 10^{16}$ rad/s và $\gamma = 3.22 \times 10^{13}$ rad/s. Hãy tính hằng số điện môi của Ag ở bước sóng $\lambda = 1550$ nm (bước sóng viễn thông). Lưu ý: $c = 3 \times 10^8$ m/s.
+
+<Solution>
+Đầu tiên, tính tần số góc $\omega$ cho $\lambda = 1550$ nm:
+$$ \omega = \frac{2\pi c}{\lambda} = \frac{2\pi \times 3 \times 10^8}{1550 \times 10^{-9}} \approx 1.216 \times 10^{15} \text{ rad/s} $$
+
+Tiếp theo, thay các giá trị vào công thức mô hình Drude:
+$$ \varepsilon_m(\omega) = 1 - \frac{(1.38 \times 10^{16})^2}{(1.216 \times 10^{15})^2 + i(3.22 \times 10^{13})(1.216 \times 10^{15})} $$
+
+Tính các thành phần:
+- $\omega_p^2 = 1.9044 \times 10^{32}$
+- $\omega^2 = 1.478 \times 10^{30}$
+- $\gamma\omega = 3.915 \times 10^{28}$
+
+Vì $\omega^2 \gg \gamma\omega$, ta có thể xấp xỉ phần thực:
+$$ \text{Re}(\varepsilon_m) \approx 1 - \frac{\omega_p^2}{\omega^2} = 1 - \frac{1.9044 \times 10^{32}}{1.478 \times 10^{30}} \approx 1 - 128.8 = -127.8 $$
+
+Đối với phần ảo:
+$$ \text{Im}(\varepsilon_m) \approx \frac{\omega_p^2 \gamma}{\omega^3} \approx 3.3 $$
+
+Vậy, $\varepsilon_{Ag} \approx -127.8 + 3.3i$ tại 1550 nm. (Lưu ý: Các giá trị này là xấp xỉ lý thuyết, dữ liệu thực nghiệm có thể chênh lệch một chút).
+</Solution>

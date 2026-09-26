@@ -1,0 +1,36 @@
+# Chương 4: Ứng dụng của cấu trúc MDM
+
+## 4.1 Ống dẫn sóng và Bộ lọc Plasmonic
+
+Nhờ khả năng giam giữ ánh sáng ở kích thước dưới bước sóng, các cấu trúc MDM đóng vai trò là những khối xây dựng cơ bản cho các mạch quang tử nano. Chúng có thể được thiết kế để dẫn hướng ánh sáng quanh các góc cua gắt với tổn hao uốn cong (bending loss) tối thiểu, điều gần như bất khả thi với các sợi quang truyền thống.
+
+Bằng cách đưa vào các biến thể hình học (như các hốc cộng hưởng, stub, hoặc vòng cộng hưởng) vào ống dẫn sóng MDM, người ta có thể tạo ra các **bộ lọc plasmonic**. Các thiết bị này có thể chọn lọc cho truyền qua hoặc phản xạ các bước sóng cụ thể dựa trên điều kiện cộng hưởng của hốc. Ví dụ, một hốc hình chữ nhật ghép nối cạnh (side-coupled) sẽ tạo ra một đáy truyền qua (notch filter) tại bước sóng cộng hưởng.
+
+## 4.2 Cảm biến chiết suất
+
+Ống dẫn sóng MDM ghép nối với các bộ cộng hưởng cực kỳ nhạy cảm với những thay đổi về chiết suất của môi trường xung quanh hoặc vật liệu lấp đầy bên trong hốc. Nguyên lý này được sử dụng rộng rãi để thiết kế **các cảm biến chiết suất ở cấp độ nano** dùng trong phát hiện sinh học hoặc hóa học.
+
+Bước sóng cộng hưởng $\lambda_{res}$ của một hốc plasmonic xấp xỉ tỷ lệ thuận với chiết suất hiệu dụng $n_{eff}$ của mode truyền:
+$$ \lambda_{res} \propto n_{eff} \cdot L $$
+với $L$ là một tham số hình học (như chiều dài của hốc). Khi một phân tử mục tiêu liên kết bên trong hốc, chiết suất cục bộ tăng lên, gây ra sự dịch chuyển đỏ (red-shift) của bước sóng cộng hưởng.
+
+## 4.3 Đọc hiểu bài báo nghiên cứu (Case Study)
+
+Nhiều bài báo tổng quan và sách giáo khoa gần đây (chẳng hạn như *Plasmonics: Fundamentals and Applications* của Stefan A. Maier) nhấn mạnh việc tích hợp các cộng hưởng Fano trong cấu trúc MDM. Cộng hưởng Fano được đặc trưng bởi hình dạng vạch phổ hẹp, bất đối xứng, sinh ra từ sự giao thoa giữa một trạng thái liên tục rộng (ví dụ: mode ống dẫn sóng trực tiếp) và một trạng thái rời rạc hẹp (ví dụ: mode của hốc). Cộng hưởng Fano làm tăng đáng kể Hệ số phẩm chất (FOM - Figure of Merit) của các cảm biến.
+
+---
+
+# Chương 5: Phụ lục
+
+## 5.1 Các Hằng số Điện môi Phổ biến
+
+Trong các mô phỏng thực tế, hằng số điện môi của kim loại thường được lấy từ dữ liệu thực nghiệm, chẳng hạn như bộ dữ liệu nổi tiếng của **Johnson & Christy** hoặc **Palik**, thay vì dùng mô hình Drude đơn giản.
+- Tại $\lambda = 800$ nm:
+  - $\varepsilon_{Ag} \approx -30 + 0.4i$
+  - $\varepsilon_{Au} \approx -24 + 1.5i$
+
+## 5.2 Các Công cụ Mô phỏng
+
+Các nhà nghiên cứu thường sử dụng các phương pháp số để giải phương trình Maxwell cho các dạng hình học MDM phức tạp khi không thể có nghiệm giải tích.
+- **FDTD (Finite-Difference Time-Domain):** Phần mềm như Lumerical FDTD là tiêu chuẩn để tính toán phổ truyền qua và hình dung sự lan truyền của xung.
+- **FEM (Phương pháp Phần tử Hữu hạn):** Phần mềm như COMSOL Multiphysics được sử dụng rộng rãi để phân tích mode (mode analysis) và tìm phân bố trường ở trạng thái dừng.

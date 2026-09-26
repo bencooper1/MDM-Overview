@@ -1,0 +1,17 @@
+{
+  "HomePage": {
+    "title": "Học Plasmonics & Cấu trúc MDM",
+    "description": "Nền tảng học tập từ cơ bản đến nâng cao về Plasmonics và cấu trúc Metal-Dielectric-Metal.",
+    "start_learning": "Bắt đầu học"
+  },
+  "Sidebar": {
+    "chapters": "Các chương",
+    "chapter_1": "Chương 1: Mở đầu về Plasmonics và Cấu trúc MDM",
+    "chapter_2": "Chương 2: Cơ sở lý thuyết của SPPs trong MDM",
+    "chapter_3": "Chương 3: Tính chất quang học & Sự đánh đổi",
+    "chapter_4": "Chương 4: Ứng dụng của cấu trúc MDM"
+  },
+  "Components": {
+    "solution": "Lời giải"
+  }
+}

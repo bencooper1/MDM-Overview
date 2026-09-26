@@ -1,0 +1,17 @@
+{
+  "HomePage": {
+    "title": "Learn Plasmonics & MDM Structures",
+    "description": "A comprehensive learning platform from basic to advanced concepts of Plasmonics and Metal-Dielectric-Metal structures.",
+    "start_learning": "Start learning"
+  },
+  "Sidebar": {
+    "chapters": "Chapters",
+    "chapter_1": "Chapter 1: Introduction to Plasmonics & MDM",
+    "chapter_2": "Chapter 2: Theoretical Background of SPPs in MDM",
+    "chapter_3": "Chapter 3: Optical Properties & Trade-offs",
+    "chapter_4": "Chapter 4: Applications of MDM Structures"
+  },
+  "Components": {
+    "solution": "Solution"
+  }
+}

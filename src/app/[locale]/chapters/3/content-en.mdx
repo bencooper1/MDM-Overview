@@ -1,0 +1,43 @@
+# Chapter 3: Optical Properties & Trade-offs
+
+## 3.1 Subwavelength Light Confinement
+
+One of the most significant advantages of Metal-Dielectric-Metal (MDM) plasmonic waveguides is their ability to confine light to dimensions much smaller than the wavelength of light in free space ($\lambda_0$). This is known as **subwavelength light confinement**.
+
+In a conventional dielectric waveguide (like an optical fiber), the minimum width of the waveguide is fundamentally limited by the diffraction limit, which is approximately $\lambda_0 / (2n)$, where $n$ is the refractive index of the core.
+
+However, in an MDM waveguide, the fundamental even mode has no cut-off thickness. This means that as the width of the dielectric core $w$ is reduced to the nanometer scale ($w \ll \lambda_0$), the waveguide can still support the propagation of the even SPP mode. As $w$ decreases, the effective index ($n_{eff}$) of the mode increases dramatically, leading to highly localized electromagnetic fields inside the ultra-thin dielectric gap.
+
+## 3.2 Confinement vs. Propagation Length Trade-off
+
+While MDM waveguides offer excellent mode confinement, they suffer from a fundamental trade-off: **Confinement vs. Propagation Length**.
+
+The propagation length $L_{prop}$ of an SPP mode is defined as the distance over which the power of the mode decays by a factor of $1/e$ (approximately 37%). It is determined by the imaginary part of the complex propagation constant $\beta = \beta' + i\beta''$:
+$$ L_{prop} = \frac{1}{2\beta''} $$
+
+When the width $w$ of the MDM waveguide is reduced to increase the mode confinement:
+1. A larger fraction of the electromagnetic field penetrates into the metal cladding.
+2. Metals are highly absorptive at optical frequencies due to Ohmic losses (collisions of free electrons).
+3. The increased field-metal overlap leads to higher absorption, resulting in a larger imaginary part $\beta''$.
+4. Consequently, the propagation length $L_{prop}$ drastically decreases.
+
+In practical designs, a balance must be struck. If a device requires highly localized fields (e.g., a nanoscale sensor), the propagation length will be short (a few micrometers). If longer transmission distances are needed, the core width must be increased, sacrificing some confinement.
+
+## 3.3 Losses in MDM Structures
+
+Losses in MDM waveguides primarily come from two sources:
+- **Ohmic Losses (Absorption):** Inherent in the metals due to the imaginary part of their complex permittivity. Silver (Ag) and Gold (Au) are the most commonly used metals because they have the lowest Ohmic losses in the visible and near-infrared spectrum.
+- **Scattering Losses:** Arise from surface roughness at the metal-dielectric interfaces created during the fabrication processes (e.g., sputtering or evaporation).
+
+---
+
+### Exercise 3.1
+Why is Gold (Au) often preferred over Silver (Ag) in plasmonic biosensors, even though Silver has lower Ohmic losses and provides a longer propagation length?
+
+<Solution>
+While Silver (Ag) indeed has lower Ohmic losses (smaller imaginary part of the dielectric constant) than Gold (Au) in the visible and near-infrared regions, providing longer propagation lengths and sharper resonance peaks, Gold is often preferred in biosensors for the following practical reasons:
+
+1. **Chemical Stability:** Silver oxidizes and tarnishes very easily when exposed to air or aqueous environments, which degrades its plasmonic properties quickly. Gold is a noble metal, highly chemically stable, and does not oxidize easily.
+2. **Biocompatibility:** Gold is highly biocompatible and non-toxic, making it suitable for in-vivo applications and cell studies.
+3. **Surface Functionalization:** The surface chemistry of Gold is very well understood. It is straightforward to attach specific biological molecules (like antibodies or DNA) to a Gold surface using thiol chemistry (S-H bonds), which is crucial for creating specific biosensors. Silver's surface chemistry is more complex and less stable for these applications.
+</Solution>
