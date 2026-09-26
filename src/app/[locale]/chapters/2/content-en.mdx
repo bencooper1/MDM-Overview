@@ -1,0 +1,55 @@
+# Chapter 2: Theoretical Background of SPPs in MDM
+
+## 2.1 Maxwell's Equations & Boundary Conditions
+
+To derive the properties of Surface Plasmon Polaritons (SPPs) in a Metal-Dielectric-Metal (MDM) waveguide, we start with **Maxwell's equations**. Assuming a non-magnetic medium ($\mu = 1$) and no free charges or currents, the wave equation for the electric field $\mathbf{E}$ is:
+
+$$ \nabla^2 \mathbf{E} - \frac{\varepsilon}{c^2} \frac{\partial^2 \mathbf{E}}{\partial t^2} = 0 $$
+
+For an MDM waveguide extending in the $y$ and $z$ directions, with the propagation along the $x$-axis, we only consider Transverse Magnetic (TM) modes (also known as p-polarized waves). SPPs only exist for TM polarization because the surface charge density requires an electric field component normal to the interface to be excited.
+
+The non-zero field components are $E_x, E_z$, and $H_y$. By applying the boundary conditions—continuity of the tangential electric field ($E_x$) and tangential magnetic field ($H_y$) across the interfaces—we can derive the dispersion relations.
+
+## 2.2 Dispersion Relations for MDM Structures
+
+Consider an MDM waveguide with a dielectric core of width $w$ and dielectric constant $\varepsilon_d$, sandwiched between two semi-infinite metal cladding layers with dielectric constant $\varepsilon_m$. The core spans from $z = -w/2$ to $z = w/2$.
+
+The interaction between the two SPP modes at the two metal-dielectric interfaces leads to mode splitting. The dispersion relations for the coupled modes are implicit equations:
+
+**For the Even Mode (symmetric $H_y$):**
+$$ \tanh\left(\frac{k_d w}{2}\right) = -\frac{k_m \varepsilon_d}{k_d \varepsilon_m} $$
+
+**For the Odd Mode (antisymmetric $H_y$):**
+$$ \coth\left(\frac{k_d w}{2}\right) = -\frac{k_m \varepsilon_d}{k_d \varepsilon_m} $$
+
+Here, $k_d$ and $k_m$ are the transverse decay constants in the dielectric and metal, respectively, defined as:
+$$ k_d = \sqrt{\beta^2 - k_0^2 \varepsilon_d} $$
+$$ k_m = \sqrt{\beta^2 - k_0^2 \varepsilon_m} $$
+Where $\beta$ is the propagation constant of the SPP mode, and $k_0 = \omega / c$ is the free-space wavevector.
+
+## 2.3 Electromagnetic Field Distribution
+
+The field distribution $H_y(z)$ across the cross-section of the MDM waveguide depends on the mode:
+
+For the **Even Mode**, $H_y(z)$ has a cosine-like shape inside the dielectric core and decays exponentially into the metals. It has no zero-crossings inside the core.
+
+For the **Odd Mode**, $H_y(z)$ has a sine-like shape inside the dielectric core, meaning it crosses zero at the center of the waveguide ($z = 0$). Because of this field zero, the odd mode typically has lower energy confinement inside the dielectric compared to the even mode but can have a longer propagation length.
+
+---
+
+### Exercise 2.1
+Consider a wide MDM waveguide where the dielectric width $w \to \infty$. What happens to the dispersion equations for both the even and odd modes?
+
+<Solution>
+When the width $w$ approaches infinity ($w \to \infty$), the term $\frac{k_d w}{2}$ also approaches infinity.
+
+We know that for large arguments:
+$$ \lim_{x \to \infty} \tanh(x) = 1 $$
+$$ \lim_{x \to \infty} \coth(x) = 1 $$
+
+Substituting these into both the even and odd mode dispersion equations, they both reduce to a single equation:
+$$ 1 = -\frac{k_m \varepsilon_d}{k_d \varepsilon_m} $$
+$$ \frac{k_d}{\varepsilon_d} + \frac{k_m}{\varepsilon_m} = 0 $$
+
+This is exactly the dispersion relation for a single, uncoupled interface between a semi-infinite metal and a semi-infinite dielectric. This makes physical sense: if the dielectric is infinitely wide, the SPPs on the top interface and the bottom interface are too far apart to interact or couple with each other. They behave as two independent, single-interface SPPs.
+</Solution>

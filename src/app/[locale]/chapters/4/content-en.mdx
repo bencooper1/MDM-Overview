@@ -1,0 +1,36 @@
+# Chapter 4: Applications of MDM Structures
+
+## 4.1 Plasmonic Waveguides and Filters
+
+Because of their ability to confine light to subwavelength dimensions, MDM structures form the basic building blocks for nanoscale photonic circuits. They can be engineered to guide light around sharp corners with minimal bending losses, which is impossible with traditional optical fibers.
+
+By introducing geometric variations (such as stubs, cavities, or ring resonators) into the MDM waveguide, it is possible to create **plasmonic filters**. These devices can selectively transmit or reflect specific wavelengths based on the resonance conditions of the cavity. For example, a side-coupled rectangular cavity will create a transmission dip (notch filter) at the resonance wavelength.
+
+## 4.2 Refractive Index Sensors
+
+MDM waveguides coupled with resonators are highly sensitive to changes in the refractive index of the surrounding environment or the material filling the cavity. This principle is widely used to design **nanoscale refractive index sensors** for biological or chemical detection.
+
+The resonance wavelength $\lambda_{res}$ of a plasmonic cavity is approximately proportional to the effective refractive index $n_{eff}$ of the mode:
+$$ \lambda_{res} \propto n_{eff} \cdot L $$
+where $L$ is a geometric parameter (like the length of the cavity). When a target molecule binds inside the cavity, the local refractive index increases, causing a red-shift in the resonance wavelength.
+
+## 4.3 Case Study: Advanced MDM Sensor
+
+Many recent review papers and textbooks (such as *Plasmonics: Fundamentals and Applications* by Stefan A. Maier) highlight the integration of Fano resonances in MDM structures. Fano resonances are characterized by an asymmetric, sharp line-shape resulting from the interference between a broad continuum state (e.g., the direct waveguide mode) and a narrow discrete state (e.g., a cavity mode). Fano resonances significantly increase the Figure of Merit (FOM) of sensors.
+
+---
+
+# Chapter 5: Appendices
+
+## 5.1 Common Dielectric Constants
+
+In practical simulations, the dielectric constant of metals is usually obtained from experimental data, such as the widely used **Johnson & Christy** or **Palik** datasets, rather than the simple Drude model.
+- At $\lambda = 800$ nm:
+  - $\varepsilon_{Ag} \approx -30 + 0.4i$
+  - $\varepsilon_{Au} \approx -24 + 1.5i$
+
+## 5.2 Simulation Tools
+
+Researchers commonly use numerical methods to solve Maxwell's equations for complex MDM geometries where analytical solutions are not possible.
+- **FDTD (Finite-Difference Time-Domain):** Software like Lumerical FDTD is standard for computing transmission spectra and visualizing pulse propagation.
+- **FEM (Finite Element Method):** Software like COMSOL Multiphysics is widely used for mode analysis and finding the steady-state field distributions.

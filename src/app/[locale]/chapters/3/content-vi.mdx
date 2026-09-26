@@ -1,0 +1,43 @@
+# Chương 3: Tính chất quang học & Sự đánh đổi
+
+## 3.1 Giam giữ ánh sáng dưới bước sóng
+
+Một trong những ưu điểm đáng kể nhất của ống dẫn sóng plasmonic Metal-Dielectric-Metal (MDM) là khả năng giam giữ ánh sáng ở kích thước nhỏ hơn nhiều so với bước sóng ánh sáng trong chân không ($\lambda_0$). Điều này được gọi là **giam giữ ánh sáng dưới bước sóng (subwavelength light confinement)**.
+
+Trong một ống dẫn sóng điện môi thông thường (như sợi quang), chiều rộng tối thiểu của ống dẫn sóng bị giới hạn về mặt cơ bản bởi giới hạn nhiễu xạ, xấp xỉ bằng $\lambda_0 / (2n)$, với $n$ là chiết suất của lõi.
+
+Tuy nhiên, trong ống dẫn sóng MDM, mode chẵn cơ bản không có độ dày cắt (cut-off thickness). Điều này có nghĩa là khi chiều rộng của lõi điện môi $w$ giảm xuống mức nanomet ($w \ll \lambda_0$), ống dẫn sóng vẫn có thể hỗ trợ sự truyền của mode SPP chẵn. Khi $w$ giảm, chiết suất hiệu dụng ($n_{eff}$) của mode tăng lên đáng kể, dẫn đến trường điện từ bị định xứ cao độ bên trong khe hở điện môi cực mỏng.
+
+## 3.2 Sự đánh đổi giữa độ giam giữ và quãng đường truyền
+
+Mặc dù ống dẫn sóng MDM mang lại khả năng giam giữ mode tuyệt vời, chúng lại gặp phải một sự đánh đổi cơ bản: **Độ giam giữ so với Quãng đường truyền**.
+
+Quãng đường truyền $L_{prop}$ của một mode SPP được định nghĩa là khoảng cách mà công suất của mode giảm đi một hệ số $1/e$ (khoảng 37%). Nó được xác định bởi phần ảo của hằng số truyền phức $\beta = \beta' + i\beta''$:
+$$ L_{prop} = \frac{1}{2\beta''} $$
+
+Khi chiều rộng $w$ của ống dẫn sóng MDM giảm xuống để tăng cường độ giam giữ mode:
+1. Một phần lớn hơn của trường điện từ sẽ xâm nhập vào lớp vỏ kim loại.
+2. Kim loại hấp thụ rất mạnh ở các tần số quang học do tổn hao Ohmic (sự va chạm của các electron tự do).
+3. Sự gia tăng vùng chồng lấp giữa trường và kim loại dẫn đến sự hấp thụ cao hơn, làm tăng phần ảo $\beta''$.
+4. Hệ quả là, quãng đường truyền $L_{prop}$ giảm đi đáng kể.
+
+Trong các thiết kế thực tế, cần phải tìm ra một sự cân bằng. Nếu một thiết bị yêu cầu trường được định xứ rất hẹp (ví dụ: một cảm biến nano), quãng đường truyền sẽ rất ngắn (vài micromet). Nếu cần khoảng cách truyền xa hơn, chiều rộng lõi phải tăng lên, hy sinh một phần khả năng giam giữ.
+
+## 3.3 Tổn hao trong cấu trúc MDM
+
+Tổn hao trong ống dẫn sóng MDM chủ yếu đến từ hai nguồn:
+- **Tổn hao Ohmic (Hấp thụ):** Vốn có trong kim loại do phần ảo của độ điện thẩm phức. Bạc (Ag) và Vàng (Au) là những kim loại được sử dụng phổ biến nhất vì chúng có tổn hao Ohmic thấp nhất trong vùng phổ khả kiến và hồng ngoại gần.
+- **Tổn hao tán xạ (Scattering):** Phát sinh từ độ nhám bề mặt tại các mặt phân cách kim loại - điện môi được tạo ra trong quá trình chế tạo (ví dụ: quá trình phún xạ hoặc bay hơi).
+
+---
+
+### Bài tập 3.1
+Tại sao Vàng (Au) thường được ưa chuộng hơn Bạc (Ag) trong các cảm biến sinh học plasmonic, mặc dù Bạc có tổn hao Ohmic thấp hơn và cung cấp quãng đường truyền dài hơn?
+
+<Solution>
+Mặc dù Bạc (Ag) thực sự có tổn hao Ohmic thấp hơn (phần ảo của hằng số điện môi nhỏ hơn) so với Vàng (Au) trong vùng ánh sáng khả kiến và hồng ngoại gần, giúp quãng đường truyền dài hơn và các đỉnh cộng hưởng sắc nét hơn, nhưng Vàng thường được ưu tiên sử dụng trong các cảm biến sinh học vì những lý do thực tế sau:
+
+1. **Độ ổn định hóa học:** Bạc rất dễ bị oxy hóa và xỉn màu khi tiếp xúc với không khí hoặc môi trường nước, làm suy giảm nhanh chóng các tính chất plasmonic của nó. Vàng là kim loại quý, có độ ổn định hóa học cao và không dễ bị oxy hóa.
+2. **Tính tương thích sinh học (Biocompatibility):** Vàng có tính tương thích sinh học cao và không độc hại, làm cho nó phù hợp cho các ứng dụng in-vivo và nghiên cứu tế bào.
+3. **Chức năng hóa bề mặt:** Hóa học bề mặt của Vàng đã được nghiên cứu rất rõ ràng. Việc gắn các phân tử sinh học đặc hiệu (như kháng thể hoặc DNA) lên bề mặt Vàng bằng liên kết hóa học thiol (liên kết S-H) là rất đơn giản, điều này là cốt lõi để tạo ra các cảm biến sinh học đặc hiệu. Hóa học bề mặt của Bạc phức tạp hơn và kém ổn định hơn cho các ứng dụng này.
+</Solution>
